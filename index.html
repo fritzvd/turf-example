@@ -23,6 +23,7 @@
   </head>
   <body>
   
+
     <p>Open up the 'web console' in Chrome/Firefox with F12 or Ctrl + Shift + J</p>
     <p>Be sure to select the tab 'Console'</p>
     <p>let's do some typing: </p>
@@ -34,6 +35,20 @@
     turf.distance(ams, jhb, 'miles');
     turf.distance(ams, jhb, 'radians');
 
+    // add a polygon around south africa
+    var polygon = ([ [
+        [-22.025510, 33.747421], [-22.025510, 16.872420], 
+        [-34.814657, 16.872420], [-34.814657, 33.747421]
+      ]
+    ]);
+
+    point_fc = turf.featurecollection([ams, jhb]);
+    polygon_fc = turf.featurecollection([polygon]);
+    turf.within(point_fc, polygon_fc);
+
     </pre>
+  
+    <h5> this is made with <a href="http://turfjs.org/">turfjs</a></h5>
+    <h5> this is open source <a href="https://github.com/fritzvd/turf-example">turf-example</a></h5>
   </body>
 </html>
