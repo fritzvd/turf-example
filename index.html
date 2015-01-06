@@ -1,0 +1,39 @@
+<!doctype html>
+<html encondig="utf8">
+  <head>
+    <title>turf example</title>
+    <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      line-height:1;
+      background-color:#f9f9f9;
+      font-family: sans-serif;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      padding:20px;
+    }
+
+    pre {
+      font-family: monospace;
+    }
+   </style>
+   <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+
+  </head>
+  <body>
+  
+    <p>Open up the 'web console' in Chrome/Firefox with F12 or Ctrl + Shift + J</p>
+    <p>Be sure to select the tab 'Console'</p>
+    <p>let's do some typing: </p>
+    <pre>
+    console.log('hello world')
+    var ams = turf.point(52.372410, 4.896554);
+    var jhb = turf.point(-26.193613, 28.027536);
+    turf.distance(ams, jhb, 'kilometers');
+    turf.distance(ams, jhb, 'miles');
+    turf.distance(ams, jhb, 'radians');
+
+    </pre>
+  </body>
+</html>
